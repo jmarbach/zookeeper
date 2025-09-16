@@ -120,6 +120,8 @@ export const tigerCountTool = createTool({
       const result = await directApiCall('/tools/perform-web-task', {
         prompt: 'Analyze this image and count the number of tigers visible. Look carefully at the entire image. Return just the number of tigers you can see clearly. Be precise and only count tigers that are clearly visible.',
         url: tigerImageUrl,
+        provider: 'groq',
+        model: 'meta-llama/llama-4-scout-17b-16e-instruct',
         headless: false,
         proxy: {
           active: true,
@@ -199,6 +201,8 @@ export const giraffeCountTool = createTool({
       const result = await directApiCall('/tools/perform-web-task', {
         prompt: 'Analyze this image and count the number of giraffes visible. Look carefully at the entire image. Return just the number of giraffes you can see clearly. Be precise and only count giraffes that are clearly visible.',
         url: giraffeImageUrl,
+        provider: 'groq',
+        model: 'meta-llama/llama-4-scout-17b-16e-instruct',
         headless: false,
         proxy: {
           active: true,
